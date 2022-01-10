@@ -7,8 +7,7 @@ let server = net.createServer((socket) =>
 
 	socket.on("data", (data) =>
 	{
-		let info = socket.address();
-		console.log(info["address"]+info["port"]+": "+data+"");
+		console.log(socket.remoteAddress+"("+socket.remotePort+"): "+data+"");
 		socket.write("Hello world!");
 	});
 
