@@ -8,5 +8,5 @@ services:
         ports:
           - 80:80
         volumes:
-          - ./core:/home/node/
+          - ./web:/home/node/
         command: "npm run test"
